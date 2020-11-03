@@ -6,17 +6,18 @@ import {
   SafeAreaView,
   StyleSheet,
   TouchableHighlight,
-  Image
+  Image,
 } from "react-native";
 import {
   useFonts,
-  NovaSquare_400Regular
+  NovaSquare_400Regular,
 } from "@expo-google-fonts/nova-square";
 import { AppLoading } from "expo";
+import DecipherSvg from "../svgs/Svgs";
 
 export default HomeScreen = () => {
   let [fontsLoaded] = useFonts({
-    NovaSquare_400Regular
+    NovaSquare_400Regular,
   });
   if (!fontsLoaded) {
     return <AppLoading />;
@@ -29,6 +30,7 @@ export default HomeScreen = () => {
         </View>
         <View style={styles.leftLine}></View>
         <View style={styles.rightLine}></View>
+
         <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
           <TouchableHighlight
             onPress={() => alert("heyhey whats shaking")}
@@ -54,7 +56,6 @@ export default HomeScreen = () => {
             </View>
           </TouchableHighlight>
         </View>
-
         <TouchableHighlight
           onPress={() => alert("heyhey whats shaking")}
           underlayColor="white"
@@ -62,14 +63,15 @@ export default HomeScreen = () => {
         >
           <View style={styles.largeButton}>
             <View style={styles.largeButtonInner}>
-              <Image
-                style={{ width: "50%", height: "50%" }}
-                source={require("../assets/fingerprint.png")}
-              />
+              <DecipherSvg />
               <Text style={styles.largeButtonText}>Decipher</Text>
             </View>
           </View>
         </TouchableHighlight>
+        <Text style={styles.invisibleText}>
+          heyhey whats shakingheyhey whats shakingheyhey whats shakingheyhey
+          whats shakingheyhey whats shaking
+        </Text>
       </SafeAreaView>
     );
   }
@@ -78,19 +80,22 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "space-between",
-    marginBottom: 20
+    marginBottom: 20,
+    backgroundColor: "#39465A",
   },
   titleText: {
     fontFamily: "NovaSquare_400Regular",
+    color: "#D7F8FF",
     fontSize: 48,
     textAlign: "center",
     marginTop: 20,
-    marginBottom: 10
+    marginBottom: 10,
   },
   subTitleText: {
     fontFamily: "NovaSquare_400Regular",
+    color: "#D7F8FF",
     fontSize: 18,
-    textAlign: "center"
+    textAlign: "center",
   },
   largeButton: {
     width: 200,
@@ -98,7 +103,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "lightblue",
     padding: 12,
-    borderRadius: 100
+    borderRadius: 100,
   },
   largeButtonInner: {
     width: 175,
@@ -106,11 +111,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "white",
     borderRadius: 100,
-    padding: 20
+    padding: 20,
   },
   largeButtonText: {
     fontFamily: "NovaSquare_400Regular",
-    fontSize: 32
+    fontSize: 32,
   },
   smallButton: {
     width: 150,
@@ -119,7 +124,7 @@ const styles = StyleSheet.create({
     backgroundColor: "lightblue",
     padding: 12,
     borderRadius: 100,
-    zIndex: 1
+    zIndex: 1,
   },
   smallButtonInner: {
     width: 125,
@@ -127,11 +132,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "white",
     borderRadius: 100,
-    padding: 20
+    padding: 20,
   },
   smallButtonText: {
     fontFamily: "NovaSquare_400Regular",
-    fontSize: 20
+    fontSize: 20,
   },
   leftLine: {
     position: "absolute",
@@ -139,10 +144,9 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     height: 200,
     width: 14,
-    backgroundColor: "red",
-    zIndex: 0,
-    top: 450,
-    left: 50
+    backgroundColor: "white",
+    top: 300,
+    left: 110,
   },
   rightLine: {
     position: "absolute",
@@ -150,10 +154,16 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     height: 200,
     width: 14,
-    backgroundColor: "red",
-    zIndex: 0,
-    left: 200,
-    top: -200
-  }
+    backgroundColor: "white",
+    left: 250,
+    top: 300,
+  },
+  invisibleText: {
+    color: "#39465A",
+    backgroundColor: "#39465A",
+    paddingBottom: 12,
+    position: "absolute",
+    top: 598,
+  },
 });
 // style={{ ...styles.line, transform: [{ rotate: "160deg" }] }}
