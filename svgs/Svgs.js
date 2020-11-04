@@ -22,10 +22,21 @@ export function LearnSvg() {
   </clipPath>
   </defs>
   </svg>
-  
+
       `;
 
-  const LearnSvg = () => <SvgXml xml={learn} width="50%" height="50%" />;
+  const LearnSvg = () => <SvgXml xml={learn} width="60%" height="60%" />;
 
   return <LearnSvg />;
+}
+
+export function DocSvg() {
+  const docs = `<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M40 12H24L20 8H8C5.8 8 4.02 9.8 4.02 12L4 36C4 38.2 5.8 40 8 40H40C42.2 40 44 38.2 44 36V16C44 13.8 42.2 12 40 12ZM40 36H8V16H40V36Z" fill="black"/>
+  </svg>
+  `;
+
+  const DocSvg = () => <SvgXml xml={docs} width="50%" height="60%" />;
+
+  return <DocSvg />;
 }

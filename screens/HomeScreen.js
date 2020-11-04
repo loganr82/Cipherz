@@ -13,7 +13,7 @@ import {
   NovaSquare_400Regular,
 } from "@expo-google-fonts/nova-square";
 import { AppLoading } from "expo";
-import DecipherSvg from "../svgs/Svgs";
+import { DecipherSvg, LearnSvg, DocSvg } from "../svgs/Svgs";
 
 export default HomeScreen = () => {
   let [fontsLoaded] = useFonts({
@@ -39,7 +39,8 @@ export default HomeScreen = () => {
           >
             <View style={[styles.smallButton, { marginLeft: 12 }]}>
               <View style={styles.smallButtonInner}>
-                <Text style={styles.smallButtonText}>heyhey whats shaking</Text>
+                <LearnSvg />
+                <Text style={styles.smallButtonText}>Learn</Text>
               </View>
             </View>
           </TouchableHighlight>
@@ -51,7 +52,8 @@ export default HomeScreen = () => {
           >
             <View style={[styles.smallButton, { marginRight: 12 }]}>
               <View style={styles.smallButtonInner}>
-                <Text style={styles.smallButtonText}>heyhey whats shaking</Text>
+                <DocSvg />
+                <Text style={styles.smallButtonText}>Docs</Text>
               </View>
             </View>
           </TouchableHighlight>
@@ -136,7 +138,7 @@ const styles = StyleSheet.create({
   },
   smallButtonText: {
     fontFamily: "NovaSquare_400Regular",
-    fontSize: 20,
+    fontSize: 24,
   },
   leftLine: {
     position: "absolute",
