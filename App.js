@@ -11,7 +11,11 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator>
-        <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen
+          options={{ headerStyle: { backgroundColor: "blue" } }}
+          name="Home"
+          component={HomeScreen}
+        />
         <Tab.Screen name="Identify" component={Identify} />
       </Tab.Navigator>
     </NavigationContainer>
