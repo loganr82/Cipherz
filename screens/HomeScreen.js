@@ -15,7 +15,7 @@ import {
 import { AppLoading } from "expo";
 import { DecipherSvg, LearnSvg, DocSvg } from "../svgs/Svgs";
 
-export default HomeScreen = () => {
+export default HomeScreen = ({ navigation }) => {
   const [fontsLoaded] = useFonts({
     NovaSquare_400Regular
   });
@@ -59,7 +59,7 @@ export default HomeScreen = () => {
           </TouchableHighlight>
         </View>
         <TouchableHighlight
-          onPress={() => alert("heyhey whats shaking")}
+          onPress={() => navigation.navigate("Identify")}
           underlayColor="#39465A"
           style={{ alignItems: "center" }}
         >
