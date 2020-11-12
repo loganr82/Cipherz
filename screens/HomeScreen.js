@@ -14,6 +14,9 @@ import {
 } from "@expo-google-fonts/nova-square";
 import { AppLoading } from "expo";
 import { DecipherSvg, LearnSvg, DocSvg } from "../svgs/Svgs";
+import Slider from "@react-native-community/slider";
+
+//yarn add @react-native-community/slider
 
 export default HomeScreen = ({ navigation }) => {
   const [fontsLoaded] = useFonts({

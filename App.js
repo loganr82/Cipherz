@@ -8,16 +8,12 @@ import HomeScreen from "./screens/HomeScreen.js";
 import Docs from "./screens/Docs.js";
 
 const Tab = createBottomTabNavigator();
-const Stack = createStackNavigator();
 
-function HomeTabs() {
-  return <NavigationContainer></NavigationContainer>;
-}
 export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen name="Home" component={HomeScreen} />
         <Tab.Screen name="Identify" component={Identify} />
         <Tab.Screen name="Docs" component={Docs} />
       </Tab.Navigator>
