@@ -14,8 +14,11 @@ import {
 } from "@expo-google-fonts/nova-square";
 import { AppLoading } from "expo";
 import { DecipherSvg, LearnSvg, DocSvg } from "../svgs/Svgs";
+import Slider from "@react-native-community/slider";
 
-export default HomeScreen = () => {
+//yarn add @react-native-community/slider
+
+export default HomeScreen = ({ navigation }) => {
   const [fontsLoaded] = useFonts({
     NovaSquare_400Regular
   });
@@ -59,7 +62,7 @@ export default HomeScreen = () => {
           </TouchableHighlight>
         </View>
         <TouchableHighlight
-          onPress={() => alert("heyhey whats shaking")}
+          onPress={() => navigation.navigate("Identify")}
           underlayColor="#39465A"
           style={{ alignItems: "center" }}
         >
