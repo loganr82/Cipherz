@@ -6,18 +6,18 @@ import {
   SafeAreaView,
   StyleSheet,
   TouchableHighlight,
-  Image
+  Image,
 } from "react-native";
 import {
   useFonts,
-  NovaSquare_400Regular
+  NovaSquare_400Regular,
 } from "@expo-google-fonts/nova-square";
 import { AppLoading } from "expo";
 import { DecipherSvg, LearnSvg, DocSvg } from "../svgs/Svgs";
 
-export default HomeScreen = () => {
+export default HomeScreen = ({ navigation }) => {
   const [fontsLoaded] = useFonts({
-    NovaSquare_400Regular
+    NovaSquare_400Regular,
   });
   if (!fontsLoaded) {
     return <AppLoading />;
@@ -59,7 +59,7 @@ export default HomeScreen = () => {
           </TouchableHighlight>
         </View>
         <TouchableHighlight
-          onPress={() => alert("heyhey whats shaking")}
+          onPress={() => navigation.navigate("Identify")}
           underlayColor="#39465A"
           style={{ alignItems: "center" }}
         >
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "space-between",
-    backgroundColor: "#39465A"
+    backgroundColor: "#39465A",
   },
   titleText: {
     fontFamily: "NovaSquare_400Regular",
@@ -86,13 +86,13 @@ const styles = StyleSheet.create({
     fontSize: 48,
     textAlign: "center",
     marginTop: 20,
-    marginBottom: 10
+    marginBottom: 10,
   },
   subTitleText: {
     fontFamily: "NovaSquare_400Regular",
     color: "#D7F8FF",
     fontSize: 18,
-    textAlign: "center"
+    textAlign: "center",
   },
   largeButton: {
     width: 200,
@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#CEF6FF",
     padding: 12,
     borderRadius: 100,
-    marginBottom: 20
+    marginBottom: 20,
   },
   largeButtonInner: {
     width: 175,
@@ -109,11 +109,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "white",
     borderRadius: 100,
-    padding: 20
+    padding: 20,
   },
   largeButtonText: {
     fontFamily: "NovaSquare_400Regular",
-    fontSize: 32
+    fontSize: 32,
   },
   smallButton: {
     width: 150,
@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "#CEF6FF",
     padding: 12,
-    borderRadius: 100
+    borderRadius: 100,
   },
   smallButtonInner: {
     width: 125,
@@ -129,11 +129,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "white",
     borderRadius: 100,
-    padding: 20
+    padding: 20,
   },
   smallButtonText: {
     fontFamily: "NovaSquare_400Regular",
-    fontSize: 24
+    fontSize: 24,
   },
   leftLine: {
     // position: "absolute",
@@ -141,7 +141,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     height: 200,
     width: 14,
-    backgroundColor: "white"
+    backgroundColor: "white",
     // top: 300,
     // left: 110
   },
@@ -151,8 +151,8 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     height: 200,
     width: 14,
-    backgroundColor: "white"
+    backgroundColor: "white",
     // left: 250,
     // top: 300
-  }
+  },
 });
