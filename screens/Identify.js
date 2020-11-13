@@ -1,25 +1,3 @@
-// import React from "react";
-// import { StyleSheet, Text, View } from "react-native";
-
-// const Identify = () => {
-//   return (
-//     <View style={styles.container}>
-//       <Text>hi</Text>
-//       <Text>heyhey whats shaking</Text>
-//     </View>
-//   );
-// };
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     alignItems: "center",
-//     justifyContent: "center"
-//   }
-// });
-
-// export default Identify;
-
 import React from "react";
 import * as Svg from "react-native-svg";
 import {
@@ -60,6 +38,11 @@ const Identify = () => {
               <View style={styles.smallButton}>
                 <View style={styles.smallButtonInner}>
                   <Text style={styles.smallButtonTitleText}>Letters</Text>
+                  <Text numberOfLines={3} style={styles.smallButtonText}>
+                    heyhey whats shakingheyhey whats shakingheyhey whats
+                    shakingheyhey whats shakingheyhey whats shakingheyhey whats
+                    shakingheyhey whats shaking
+                  </Text>
                 </View>
               </View>
             </TouchableHighlight>
@@ -73,6 +56,11 @@ const Identify = () => {
               <View style={styles.smallButton}>
                 <View style={styles.smallButtonInner}>
                   <Text style={styles.smallButtonTitleText}>Numbers</Text>
+                  <Text numberOfLines={3} style={styles.smallButtonText}>
+                    heyhey whats shakingheyhey whats shakingheyhey whats
+                    shakingheyhey whats shakingheyhey whats shakingheyhey whats
+                    shakingheyhey whats shaking
+                  </Text>
                 </View>
               </View>
             </TouchableHighlight>
@@ -86,7 +74,11 @@ const Identify = () => {
               <View style={styles.smallButton}>
                 <View style={styles.smallButtonInner}>
                   <Text style={styles.smallButtonTitleText}>Mixed</Text>
-                  <Text style={styles.smallButtonText}>test</Text>
+                  <Text numberOfLines={3} style={styles.smallButtonText}>
+                    heyhey whats shakingheyhey whats shakingheyhey whats
+                    shakingheyhey whats shakingheyhey whats shakingheyhey whats
+                    shakingheyhey whats shaking
+                  </Text>
                 </View>
               </View>
             </TouchableHighlight>

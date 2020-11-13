@@ -1,9 +1,11 @@
 import "react-native-gesture-handler";
 import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
+import { NavigationContainer, StackActions } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { createStackNavigator } from "@react-navigation/stack";
 import Identify from "./screens/Identify.js";
 import HomeScreen from "./screens/HomeScreen.js";
+import Docs from "./screens/Docs.js";
 import { Ionicons, Entypo } from "@expo/vector-icons";
 
 const Tab = createBottomTabNavigator();
@@ -42,7 +44,10 @@ export default function App() {
           component={HomeScreen}
         />
         <Tab.Screen name="Identify" component={Identify} />
+        <Tab.Screen name="Docs" component={Docs} />
       </Tab.Navigator>
     </NavigationContainer>
   );
 }
+
+// options={{ tabBarVisible: false }}
