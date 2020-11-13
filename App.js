@@ -2,11 +2,12 @@ import "react-native-gesture-handler";
 import React from "react";
 import { NavigationContainer, StackActions } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { createStackNavigator } from "@react-navigation/stack";
 import Identify from "./screens/Identify.js";
 import HomeScreen from "./screens/HomeScreen.js";
 import Docs from "./screens/Docs.js";
-import { Ionicons, Entypo } from "@expo/vector-icons";
+import Learn from "./screens/Learn.js";
+import { Ionicons } from "@expo/vector-icons";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 const Tab = createBottomTabNavigator();
 
@@ -15,27 +16,46 @@ export default function App() {
     <NavigationContainer>
       <Tab.Navigator
         screenOptions={({ route }) => ({
+          // tabBarButton: ["Home"].includes(route.name)
+          //   ? () => {
+          //       return null;
+          //     }
+          //   : undefined,
+
           tabBarIcon: ({ focused, color, size }) => {
             let iconName;
 
             if (route.name === "Home") {
-              iconName = focused
-                ? // ? "ios-information-circle"
-                  // : "ios-information-circle-outline";
-                  "md-finger-print"
-                : "md-finger-print";
+              iconName = focused ? "home" : "home";
             } else if (route.name === "Identify") {
-              iconName = focused ? "magnifying-glass" : "magnifying-glass";
+              iconName = focused ? "fingerprint" : "fingerprint";
+            } else if (route.name === "Docs") {
+              iconName = focused ? "folder-outline" : "folder-outline";
+            } else if (route.name === "Learn") {
+              iconName = focused ? "pencil" : "pencil";
             }
 
-            // You can return any component that you like here!
-            return <Ionicons name={iconName} size={size} color={color} />;
-            return <Entypo name={iconName} size={size} color={color} />;
-          },
+            // return [
+            //   <Ionicons name={iconName} size={size} color={color} />,
+
+            // <MaterialCommunityIcons
+            //   name={iconNamee}
+            //   size={size}
+            //   color={color}
+            // />
+            // ];
+            return (
+              <MaterialCommunityIcons
+                name={iconName}
+                size={size}
+                color={color}
+              />
+            );
+          }
         })}
         tabBarOptions={{
           activeTintColor: "#39465A",
-          inactiveTintColor: "gray",
+          inactiveTintColor: "gray"
         }}
       >
         <Tab.Screen
@@ -45,6 +65,7 @@ export default function App() {
         />
         <Tab.Screen name="Identify" component={Identify} />
         <Tab.Screen name="Docs" component={Docs} />
+        <Tab.Screen name="Learn" component={Learn} />
       </Tab.Navigator>
     </NavigationContainer>
   );
