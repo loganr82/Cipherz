@@ -35,15 +35,6 @@ export default function App() {
               iconName = focused ? "pencil" : "pencil";
             }
 
-            // return [
-            //   <Ionicons name={iconName} size={size} color={color} />,
-
-            // <MaterialCommunityIcons
-            //   name={iconNamee}
-            //   size={size}
-            //   color={color}
-            // />
-            // ];
             return (
               <MaterialCommunityIcons
                 name={iconName}
@@ -51,11 +42,11 @@ export default function App() {
                 color={color}
               />
             );
-          }
+          },
         })}
         tabBarOptions={{
-          activeTintColor: "#39465A",
-          inactiveTintColor: "gray"
+          activeTintColor: "navy",
+          inactiveTintColor: "gray",
         }}
       >
         <Tab.Screen
