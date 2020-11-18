@@ -15,7 +15,7 @@ import {
 import { AppLoading } from "expo";
 import { DecipherSvg, LearnSvg, DocSvg } from "../svgs/Svgs";
 
-const Identify = () => {
+const Identify = ({ navigation }) => {
   const [fontsLoaded] = useFonts({
     NovaSquare_400Regular,
   });
@@ -31,7 +31,7 @@ const Identify = () => {
         <View>
           <View>
             <TouchableHighlight
-              onPress={() => alert("heyhey whats shaking")}
+              onPress={() => navigation.navigate("IdentifyLetters")}
               underlayColor="#39465A"
               style={{ alignItems: "center", margin: 25 }}
             >
@@ -48,7 +48,7 @@ const Identify = () => {
           </View>
           <View>
             <TouchableHighlight
-              onPress={() => alert("heyhey whats shaking")}
+              onPress={() => navigation.navigate("IdentifyNumbers")}
               underlayColor="#39465A"
               style={{ alignItems: "center", margin: 25 }}
             >
@@ -64,7 +64,7 @@ const Identify = () => {
           </View>
           <View>
             <TouchableHighlight
-              onPress={() => alert("heyhey whats shaking")}
+              onPress={() => navigation.navigate("IdentifyMixed")}
               underlayColor="#39465A"
               style={{ alignItems: "center", margin: 25 }}
             >

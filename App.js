@@ -2,13 +2,18 @@ import "react-native-gesture-handler";
 import React from "react";
 import { NavigationContainer, StackActions } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { createStackNavigator } from "@react-navigation/stack";
 import Identify from "./screens/Identify.js";
 import HomeScreen from "./screens/HomeScreen.js";
 import Docs from "./screens/Docs.js";
 import Learn from "./screens/Learn.js";
+import IdentifyLetters from "./screens/IdentifyLetters.js";
+import IdentifyNumbers from "./screens/IdentifyNumbers.js";
+import IdentifyMixed from "./screens/IdentifyMixed.js";
 import { Ionicons } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
+const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
 export default function App() {
@@ -16,11 +21,16 @@ export default function App() {
     <NavigationContainer>
       <Tab.Navigator
         screenOptions={({ route }) => ({
-          // tabBarButton: ["Home"].includes(route.name)
-          //   ? () => {
-          //       return null;
-          //     }
-          //   : undefined,
+          tabBarButton: [
+            "Home",
+            "IdentifyLetters",
+            "IdentifyNumbers",
+            "IdentifyMixed",
+          ].includes(route.name)
+            ? () => {
+                return null;
+              }
+            : undefined,
 
           tabBarIcon: ({ focused, color, size }) => {
             let iconName;
@@ -57,9 +67,22 @@ export default function App() {
         <Tab.Screen name="Identify" component={Identify} />
         <Tab.Screen name="Docs" component={Docs} />
         <Tab.Screen name="Learn" component={Learn} />
+        <Tab.Screen name="IdentifyLetters" component={IdentifyLetters} />
+        <Tab.Screen name="IdentifyNumbers" component={IdentifyNumbers} />
+        <Tab.Screen name="IdentifyMixed" component={IdentifyMixed} />
       </Tab.Navigator>
     </NavigationContainer>
   );
 }
+
+// export function TheStack() {
+//   return (
+//     <NavigationContainer>
+//       <Stack.Navigator>
+//         <Stack.Screen name="IdentifyLetters" component={IdentifyLetters} />
+//       </Stack.Navigator>
+//     </NavigationContainer>
+//   );
+// }
 
 // options={{ tabBarVisible: false }}
