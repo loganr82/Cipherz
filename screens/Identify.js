@@ -5,19 +5,18 @@ import {
   View,
   SafeAreaView,
   StyleSheet,
-  TouchableHighlight,
-  Image,
+  TouchableHighlight
 } from "react-native";
 import {
   useFonts,
-  NovaSquare_400Regular,
+  NovaSquare_400Regular
 } from "@expo-google-fonts/nova-square";
 import { AppLoading } from "expo";
 import { DecipherSvg, LearnSvg, DocSvg } from "../svgs/Svgs";
 
 const Identify = ({ navigation }) => {
   const [fontsLoaded] = useFonts({
-    NovaSquare_400Regular,
+    NovaSquare_400Regular
   });
   if (!fontsLoaded) {
     return <AppLoading />;
@@ -86,7 +85,7 @@ const Identify = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#39465A",
+    backgroundColor: "#39465A"
   },
   titleText: {
     fontFamily: "NovaSquare_400Regular",
@@ -94,13 +93,13 @@ const styles = StyleSheet.create({
     fontSize: 48,
     textAlign: "center",
     marginTop: 20,
-    marginBottom: 10,
+    marginBottom: 10
   },
   subTitleText: {
     fontFamily: "NovaSquare_400Regular",
     color: "#D7F8FF",
     fontSize: 18,
-    textAlign: "center",
+    textAlign: "center"
   },
   smallButton: {
     width: 370,
@@ -109,25 +108,25 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     backgroundColor: "#CEF6FF",
     padding: 12,
-    borderRadius: 30,
+    borderRadius: 30
   },
   smallButtonInner: {
     width: 355,
     aspectRatio: 10 / 3 + 0.5,
     backgroundColor: "white",
-    borderRadius: 25,
+    borderRadius: 25
   },
   smallButtonTitleText: {
     textAlign: "center",
     fontFamily: "NovaSquare_400Regular",
-    fontSize: 30,
+    fontSize: 30
   },
   smallButtonText: {
     textAlign: "left",
     fontFamily: "NovaSquare_400Regular",
     fontSize: 15,
-    padding: 10,
-  },
+    padding: 10
+  }
 });
 
 export default Identify;

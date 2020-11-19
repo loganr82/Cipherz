@@ -17,6 +17,13 @@ const links = [
     link: "github.com"
   }
 ];
+
+const Item = ({ item, onPress, style }) => (
+  <TouchableOpacity onPress={onPress}>
+    <Text>{item.title}</Text>
+  </TouchableOpacity>
+);
+
 const IdentifyLetters = () => {
   return (
     <View style={styles.container}>
