@@ -1,8 +1,7 @@
 import "react-native-gesture-handler";
 import React from "react";
-import { NavigationContainer, StackActions } from "@react-navigation/native";
+import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { createStackNavigator } from "@react-navigation/stack";
 import Identify from "./screens/Identify.js";
 import HomeScreen from "./screens/HomeScreen.js";
 import Docs from "./screens/Docs.js";
@@ -10,10 +9,8 @@ import Learn from "./screens/Learn.js";
 import IdentifyLetters from "./screens/IdentifyLetters.js";
 import IdentifyNumbers from "./screens/IdentifyNumbers.js";
 import IdentifyMixed from "./screens/IdentifyMixed.js";
-import { Ionicons } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
-const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
 export default function App() {
@@ -25,7 +22,7 @@ export default function App() {
             "Home",
             "IdentifyLetters",
             "IdentifyNumbers",
-            "IdentifyMixed",
+            "IdentifyMixed"
           ].includes(route.name)
             ? () => {
                 return null;
@@ -52,11 +49,11 @@ export default function App() {
                 color={color}
               />
             );
-          },
+          }
         })}
         tabBarOptions={{
           activeTintColor: "navy",
-          inactiveTintColor: "gray",
+          inactiveTintColor: "gray"
         }}
       >
         <Tab.Screen
@@ -74,15 +71,3 @@ export default function App() {
     </NavigationContainer>
   );
 }
-
-// export function TheStack() {
-//   return (
-//     <NavigationContainer>
-//       <Stack.Navigator>
-//         <Stack.Screen name="IdentifyLetters" component={IdentifyLetters} />
-//       </Stack.Navigator>
-//     </NavigationContainer>
-//   );
-// }
-
-// options={{ tabBarVisible: false }}

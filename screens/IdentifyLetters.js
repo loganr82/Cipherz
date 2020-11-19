@@ -1,11 +1,26 @@
 import React from "react";
-import { StyleSheet, Text, View, FlatList } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  FlatList,
+  TouchableHighlight
+} from "react-native";
 
+const links = [
+  {
+    id: 1,
+    link: "google.com"
+  },
+  {
+    id: 2,
+    link: "github.com"
+  }
+];
 const IdentifyLetters = () => {
   return (
     <View style={styles.container}>
-      <Text>hi</Text>
-      <Text>heyhey whats shaking</Text>
+      <FlatList>hi</FlatList>
     </View>
   );
 };
@@ -14,8 +29,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    justifyContent: "center",
-  },
+    justifyContent: "center"
+  }
 });
 
 export default IdentifyLetters;
