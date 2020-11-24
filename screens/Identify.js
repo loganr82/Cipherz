@@ -12,7 +12,6 @@ import {
   NovaSquare_400Regular
 } from "@expo-google-fonts/nova-square";
 import { AppLoading } from "expo";
-import { DecipherSvg, LearnSvg, DocSvg } from "../svgs/Svgs";
 
 const Identify = ({ navigation }) => {
   const [fontsLoaded] = useFonts({

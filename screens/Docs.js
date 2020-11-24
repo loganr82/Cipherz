@@ -4,8 +4,8 @@ import { StyleSheet, Text, View } from "react-native";
 const Docs = () => {
   return (
     <View style={styles.container}>
-      <Text>hi</Text>
-      <Text>heyhey whats shaking</Text>
+      <Text>Docs</Text>
+      <Text>Under Maintenance</Text>
     </View>
   );
 };

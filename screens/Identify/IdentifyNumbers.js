@@ -19,9 +19,9 @@ import * as Linking from "expo-linking";
 const links = [
   {
     id: 1,
-    name: "Google",
-    example: "heyhey whats shaking",
-    link: "https://google.com"
+    name: "Letter Number ",
+    example: "200805 14211302051819 1301191514 23080120 0415 20080525 13050114",
+    link: "http://rumkin.com/tools/cipher/numbers.php"
   },
   {
     id: 2,
@@ -31,10 +31,9 @@ const links = [
   },
   {
     id: 3,
-    name: "Mr. Bailey",
-    example: "heyhey whats shaking",
-    link:
-      "https://avatars3.githubusercontent.com/u/684976?s=460&u=99038daae23e0caf7a490ea8bd531bbedf90b06f&v=4"
+    name: "No link",
+    example: "Unusable button",
+    link: ""
   },
   {
     id: 4,
@@ -67,7 +66,7 @@ const Item = ({ link, name, example }) => (
   </TouchableHighlight>
 );
 
-const IdentifyMixed = () => {
+const IdentifyNumbers = () => {
   const renderItem = ({ item }) => (
     <Item link={item.link} name={item.name} example={item.example} />
   );
@@ -81,7 +80,7 @@ const IdentifyMixed = () => {
     return (
       <SafeAreaView style={styles.container}>
         <View>
-          <Text style={styles.titleText}>Mixed Ciphers</Text>
+          <Text style={styles.titleText}>Number Ciphers</Text>
           <Text style={styles.subTitleText}></Text>
         </View>
         <FlatList
@@ -149,4 +148,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default IdentifyMixed;
+export default IdentifyNumbers;

@@ -19,22 +19,21 @@ import * as Linking from "expo-linking";
 const links = [
   {
     id: 1,
-    name: "Google",
-    example: "heyhey whats shaking",
-    link: "https://google.com"
+    name: "Caesar Cipher",
+    example: "Aopz pz h jhlzhy jpwoly! Nvvk qvi vu kljvkpun pa. ",
+    link: "https://cryptii.com/pipes/caesar-cipher"
   },
   {
     id: 2,
     name: "Github",
-    example: "heyhey whats shaking",
+    example: "This is example text",
     link: "https://github.com"
   },
   {
     id: 3,
-    name: "Mr. Bailey",
-    example: "heyhey whats shaking",
-    link:
-      "https://avatars3.githubusercontent.com/u/684976?s=460&u=99038daae23e0caf7a490ea8bd531bbedf90b06f&v=4"
+    name: "No link",
+    example: "Unusable button",
+    link: ""
   },
   {
     id: 4,
@@ -67,7 +66,7 @@ const Item = ({ link, name, example }) => (
   </TouchableHighlight>
 );
 
-const IdentifyNumbers = () => {
+const IdentifyLetters = () => {
   const renderItem = ({ item }) => (
     <Item link={item.link} name={item.name} example={item.example} />
   );
@@ -81,7 +80,7 @@ const IdentifyNumbers = () => {
     return (
       <SafeAreaView style={styles.container}>
         <View>
-          <Text style={styles.titleText}>Mixed Ciphers</Text>
+          <Text style={styles.titleText}>Letter Ciphers</Text>
           <Text style={styles.subTitleText}></Text>
         </View>
         <FlatList
@@ -149,4 +148,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default IdentifyNumbers;
+export default IdentifyLetters;

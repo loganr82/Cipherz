@@ -33,7 +33,7 @@ export default HomeScreen = ({ navigation }) => {
 
         <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
           <TouchableHighlight
-            onPress={() => alert("heyhey whats shaking")}
+            onPress={() => navigation.navigate("Learn")}
             underlayColor="#39465A"
             style={{ alignItems: "center" }}
           >
@@ -46,7 +46,7 @@ export default HomeScreen = ({ navigation }) => {
           </TouchableHighlight>
 
           <TouchableHighlight
-            onPress={() => alert("heyhey whats shaking")}
+            onPress={() => navigation.navigate("Docs")}
             underlayColor="#39465A"
             style={{ alignItems: "center" }}
           >

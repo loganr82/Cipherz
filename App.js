@@ -6,9 +6,10 @@ import Identify from "./screens/Identify.js";
 import HomeScreen from "./screens/HomeScreen.js";
 import Docs from "./screens/Docs.js";
 import Learn from "./screens/Learn.js";
-import IdentifyLetters from "./screens/IdentifyLetters.js";
-import IdentifyNumbers from "./screens/IdentifyNumbers.js";
-import IdentifyMixed from "./screens/IdentifyMixed.js";
+import IdentifyLetters from "./screens/Identify/IdentifyLetters.js";
+import IdentifyNumbers from "./screens/Identify/IdentifyNumbers.js";
+import IdentifyMixed from "./screens/Identify/IdentifyMixed.js";
+import Level1 from "./screens/Levels/Level1.js";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 const Tab = createBottomTabNavigator();
@@ -22,7 +23,8 @@ export default function App() {
             "Home",
             "IdentifyLetters",
             "IdentifyNumbers",
-            "IdentifyMixed"
+            "IdentifyMixed",
+            "Level1"
           ].includes(route.name)
             ? () => {
                 return null;
