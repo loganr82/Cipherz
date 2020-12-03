@@ -69,6 +69,7 @@ export default function App() {
         <Tab.Screen name="IdentifyLetters" component={IdentifyLetters} />
         <Tab.Screen name="IdentifyNumbers" component={IdentifyNumbers} />
         <Tab.Screen name="IdentifyMixed" component={IdentifyMixed} />
+        <Tab.Screen name="Level1" component={Level1} />
       </Tab.Navigator>
     </NavigationContainer>
   );

@@ -2,6 +2,7 @@
   "expo": {
     "name": "Demo-App",
     "slug": "Demo-App",
+    "description": "Cipherz is designed with the goal of helping you solve ciphers. Deciphering, completing lessons, and browsing the documents are all key features.",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -13,9 +14,7 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
