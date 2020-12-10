@@ -14,7 +14,7 @@ import {
   NovaSquare_400Regular
 } from "@expo-google-fonts/nova-square";
 import { AppLoading } from "expo";
-import * as Linking from "expo-linking";
+import * as WebBrowser from "expo-web-browser";
 
 const links = [
   {
@@ -51,7 +51,7 @@ const links = [
 
 const Item = ({ link, name, example }) => (
   <TouchableHighlight
-    onPress={() => Linking.openURL(link)}
+    onPress={() => WebBrowser.openBrowserAsync(link)}
     underlayColor="#39465A"
     style={{ alignItems: "center", margin: 20 }}
   >

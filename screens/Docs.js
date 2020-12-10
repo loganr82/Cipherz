@@ -1,11 +1,16 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity, Image } from "react-native";
 
 const Docs = () => {
   return (
-    <View style={styles.container}>
-      <Text>Docs</Text>
-      <Text>Under Maintenance</Text>
+    <View>
+      <View style={styles.container}>
+        <Text>Docs</Text>
+        <Text>Under Maintenance</Text>
+      </View>
+      <TouchableOpacity onPress={() => alert("death")}>
+        <Image source={require("../assets/bill.jpg")} />
+      </TouchableOpacity>
     </View>
   );
 };
