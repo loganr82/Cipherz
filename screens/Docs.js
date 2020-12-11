@@ -3,14 +3,14 @@ import { StyleSheet, Text, View, TouchableOpacity, Image } from "react-native";
 
 const Docs = () => {
   return (
-    <View>
-      <View style={styles.container}>
-        <Text>Docs</Text>
-        <Text>Under Maintenance</Text>
-      </View>
-      <TouchableOpacity onPress={() => alert("death")}>
+    // <View>
+    <View style={styles.container}>
+      <Text>Docs</Text>
+      <Text>Under Maintenance</Text>
+      {/* </View> */}
+      {/* <TouchableOpacity onPress={() => alert("death")}>
         <Image source={require("../assets/bill.jpg")} />
-      </TouchableOpacity>
+      </TouchableOpacity> */}
     </View>
   );
 };
