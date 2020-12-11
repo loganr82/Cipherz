@@ -1,7 +1,7 @@
 # Cipherz
 <img src="screenshots/icon.png" width=100 height=100>
-Cipherz is built to explore the world of cryptography and assist you in any cipher involved endeavors. Identify what type of code you want to decrypt, browse documentation of all recorded ciphers, and even begin free lessons to learn how to encrypt and decrypt on your own.
-
+Cipherz is built to explore the world of cryptography and assist you in any cipher involved endeavors. Identify what type of code you want to decrypt, browse documentation of all recorded ciphers, and even begin free lessons to learn how to encrypt and decrypt on your own.  
+<br>
 <img src="screenshots/main.png" width=200 height=320>
 
 ### Developing
