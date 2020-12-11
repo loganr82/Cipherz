@@ -23,8 +23,8 @@ const Learn = ({ navigation }) => {
     return (
       <SafeAreaView style={styles.container}>
         <View>
-          <Text style={styles.titleText}>Identify</Text>
-          <Text style={styles.subTitleText}> Narrow down the code</Text>
+          <Text style={styles.titleText}>Learn</Text>
+          <Text style={styles.subTitleText}> Master cryptography</Text>
         </View>
         <View>
           <View>
