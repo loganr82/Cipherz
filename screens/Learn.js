@@ -13,7 +13,7 @@ import {
 } from "@expo-google-fonts/nova-square";
 import { AppLoading } from "expo";
 
-const Identify = ({ navigation }) => {
+const Learn = ({ navigation }) => {
   const [fontsLoaded] = useFonts({
     NovaSquare_400Regular
   });
@@ -23,22 +23,20 @@ const Identify = ({ navigation }) => {
     return (
       <SafeAreaView style={styles.container}>
         <View>
-          <Text style={styles.titleText}>Identify</Text>
-          <Text style={styles.subTitleText}> Narrow down the code</Text>
+          <Text style={styles.titleText}>Learn</Text>
+          <Text style={styles.subTitleText}> Master cryptography</Text>
         </View>
         <View>
           <View>
             <TouchableHighlight
-              onPress={() => navigation.navigate("IdentifyLetters")}
+              onPress={() => navigation.navigate("Level1")}
               underlayColor="#39465A"
               style={{ alignItems: "center", margin: 25 }}
             >
               <View style={styles.smallButton}>
                 <View style={styles.smallButtonInner}>
-                  <Text style={styles.smallButtonTitleText}>Letters</Text>
                   <Text numberOfLines={2} style={styles.smallButtonText}>
-                    Gunax lbh sbe gelvat gur ncc! V ubcr lbh'er univat n avpr
-                    qnl.
+                    Level 1: The Basics
                   </Text>
                 </View>
               </View>
@@ -46,15 +44,14 @@ const Identify = ({ navigation }) => {
           </View>
           <View>
             <TouchableHighlight
-              onPress={() => navigation.navigate("IdentifyNumbers")}
+              onPress={() => navigation.navigate("")}
               underlayColor="#39465A"
               style={{ alignItems: "center", margin: 25 }}
             >
               <View style={styles.smallButton}>
                 <View style={styles.smallButtonInner}>
-                  <Text style={styles.smallButtonTitleText}>Numbers</Text>
                   <Text numberOfLines={2} style={styles.smallButtonText}>
-                    251521 1805 1514 25152118 230125 2008051805
+                    Level 2: First Cipher
                   </Text>
                 </View>
               </View>
@@ -62,15 +59,14 @@ const Identify = ({ navigation }) => {
           </View>
           <View>
             <TouchableHighlight
-              onPress={() => navigation.navigate("IdentifyMixed")}
+              onPress={() => navigation.navigate("")}
               underlayColor="#39465A"
               style={{ alignItems: "center", margin: 25 }}
             >
               <View style={styles.smallButton}>
                 <View style={styles.smallButtonInner}>
-                  <Text style={styles.smallButtonTitleText}>Mixed</Text>
                   <Text numberOfLines={2} style={styles.smallButtonText}>
-                    VGhpcyBpcyBCYXNlNjQsIG5vdCBhIHRydWUgY2lwaGVyLg==
+                    Level 3: Tips
                   </Text>
                 </View>
               </View>
@@ -110,6 +106,7 @@ const styles = StyleSheet.create({
     borderRadius: 30
   },
   smallButtonInner: {
+    justifyContent: "center",
     width: 355,
     aspectRatio: 10 / 3 + 0.5,
     backgroundColor: "white",
@@ -123,9 +120,9 @@ const styles = StyleSheet.create({
   smallButtonText: {
     textAlign: "left",
     fontFamily: "NovaSquare_400Regular",
-    fontSize: 15,
+    fontSize: 32,
     padding: 10
   }
 });
 
-export default Identify;
+export default Learn;

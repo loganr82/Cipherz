@@ -1,21 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import * as Svg from "react-native-svg";
 import {
   Text,
   View,
   SafeAreaView,
   StyleSheet,
-  TouchableHighlight,
-  Image
+  TouchableHighlight
 } from "react-native";
 import {
   useFonts,
   NovaSquare_400Regular
 } from "@expo-google-fonts/nova-square";
 import { AppLoading } from "expo";
+import { DecipherSvg, LearnSvg, DocSvg } from "../svgs/Svgs";
+import Slider from "@react-native-community/slider";
 
-export default HomeScreen = () => {
-  let [fontsLoaded] = useFonts({
+export default HomeScreen = ({ navigation }) => {
+  const [fontsLoaded] = useFonts({
     NovaSquare_400Regular
   });
   if (!fontsLoaded) {
@@ -27,45 +28,44 @@ export default HomeScreen = () => {
           <Text style={styles.titleText}>Cipherz</Text>
           <Text style={styles.subTitleText}>Knowledge at your fingertips</Text>
         </View>
-        <View style={styles.leftLine}></View>
-        <View style={styles.rightLine}></View>
+        {/* <View style={styles.leftLine}></View>
+        <View style={styles.rightLine}></View> */}
+
         <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
           <TouchableHighlight
-            onPress={() => alert("heyhey whats shaking")}
-            underlayColor="white"
+            onPress={() => navigation.navigate("Learn")}
+            underlayColor="#39465A"
             style={{ alignItems: "center" }}
           >
             <View style={[styles.smallButton, { marginLeft: 12 }]}>
               <View style={styles.smallButtonInner}>
-                <Text style={styles.smallButtonText}>heyhey whats shaking</Text>
+                <LearnSvg />
+                <Text style={styles.smallButtonText}>Learn</Text>
               </View>
             </View>
           </TouchableHighlight>
 
           <TouchableHighlight
-            onPress={() => alert("heyhey whats shaking")}
-            underlayColor="white"
+            onPress={() => navigation.navigate("Docs")}
+            underlayColor="#39465A"
             style={{ alignItems: "center" }}
           >
             <View style={[styles.smallButton, { marginRight: 12 }]}>
               <View style={styles.smallButtonInner}>
-                <Text style={styles.smallButtonText}>heyhey whats shaking</Text>
+                <DocSvg />
+                <Text style={styles.smallButtonText}>Docs</Text>
               </View>
             </View>
           </TouchableHighlight>
         </View>
-
         <TouchableHighlight
-          onPress={() => alert("heyhey whats shaking")}
-          underlayColor="white"
+          onPress={() => navigation.navigate("Identify")}
+          underlayColor="#39465A"
           style={{ alignItems: "center" }}
         >
           <View style={styles.largeButton}>
             <View style={styles.largeButtonInner}>
-              <Image
-                style={{ width: "50%", height: "50%" }}
-                source={require("../assets/fingerprint.png")}
-              />
+              <DecipherSvg />
               <Text style={styles.largeButtonText}>Decipher</Text>
             </View>
           </View>
@@ -78,10 +78,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "space-between",
-    marginBottom: 20
+    backgroundColor: "#39465A"
   },
   titleText: {
     fontFamily: "NovaSquare_400Regular",
+    color: "#D7F8FF",
     fontSize: 48,
     textAlign: "center",
     marginTop: 20,
@@ -89,6 +90,7 @@ const styles = StyleSheet.create({
   },
   subTitleText: {
     fontFamily: "NovaSquare_400Regular",
+    color: "#D7F8FF",
     fontSize: 18,
     textAlign: "center"
   },
@@ -96,9 +98,10 @@ const styles = StyleSheet.create({
     width: 200,
     height: 200,
     alignItems: "center",
-    backgroundColor: "lightblue",
+    backgroundColor: "#CEF6FF",
     padding: 12,
-    borderRadius: 100
+    borderRadius: 100,
+    marginBottom: 20
   },
   largeButtonInner: {
     width: 175,
@@ -116,10 +119,9 @@ const styles = StyleSheet.create({
     width: 150,
     height: 150,
     alignItems: "center",
-    backgroundColor: "lightblue",
+    backgroundColor: "#CEF6FF",
     padding: 12,
-    borderRadius: 100,
-    zIndex: 1
+    borderRadius: 100
   },
   smallButtonInner: {
     width: 125,
@@ -131,29 +133,26 @@ const styles = StyleSheet.create({
   },
   smallButtonText: {
     fontFamily: "NovaSquare_400Regular",
-    fontSize: 20
+    fontSize: 24
   },
   leftLine: {
-    position: "absolute",
+    // position: "absolute",
     transform: [{ rotate: "160deg" }],
     borderRadius: 10,
     height: 200,
     width: 14,
-    backgroundColor: "red",
-    zIndex: 0,
-    top: 450,
-    left: 50
+    backgroundColor: "white"
+    // top: 300,
+    // left: 110
   },
   rightLine: {
-    position: "absolute",
+    // position: "absolute",
     transform: [{ rotate: "20deg" }],
     borderRadius: 10,
     height: 200,
     width: 14,
-    backgroundColor: "red",
-    zIndex: 0,
-    left: 200,
-    top: -200
+    backgroundColor: "white"
+    // left: 250,
+    // top: 300
   }
 });
-// style={{ ...styles.line, transform: [{ rotate: "160deg" }] }}
