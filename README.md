@@ -14,6 +14,7 @@ Cipherz is built to explore the world of cryptography and assist you in any ciph
 <img src="screenshots/learn.png" width=180 height=320>
 </p>
 Keywords - "cipher,decode,encode,cryptography,solve,code,decipher,crypto,secret"
+
 ### Developing
 
 * Requires Yarn and Expo
