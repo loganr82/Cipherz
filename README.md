@@ -1,4 +1,4 @@
-###Cipherz was an 18 week senior class project to build an original mobile application using Expo and React Native.
+### Cipherz was an 18 week senior class project to build an original mobile application using Expo and React Native.
 
 
 # Cipherz
